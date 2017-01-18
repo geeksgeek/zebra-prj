@@ -1,0 +1,10 @@
+/* 
+   askdjango/static/css/base.css
+   
+   askdjango/settings.py 내 STATICFILES_DIRS 설정이
+   os.path.join(BASE_DIR, 'askdjango', 'static') 로 설정되었음 가정
+*/
+
+body {
+	background-color: lightyellow;
+}
