@@ -1,0 +1,25 @@
+<!-- bookmark/templates/bookmark/bookmark_list.html -->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Bookmark List</title>
+</head>
+
+<body>
+	<h1>Bookmark List</h1>
+	<ul>
+		{% for bookmark in bookmark_list %}
+			<li>
+				<a href="{% url 'detail' bookmark.pk %}">
+					{{ bookmark.title }}
+				</a>
+			</li>
+		{% empty %}
+			</li>no bookmark</li>
+		{% endfor %}
+	</ul>
+</body>
+
+</html>
