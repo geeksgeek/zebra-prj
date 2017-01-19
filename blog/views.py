@@ -8,11 +8,16 @@ from django.views.generic.dates import (
 
 from .models import Post
 
+
 class PostLV(ListView):
 	model = Post
 	paginate_by = 2
 
 class PostDV(DetailView):
+	model = Post
+	date_field = 'modify_date'
+
+class PostAV(ArchiveIndexView):
 	model = Post
 	date_field = 'modify_date'
 
